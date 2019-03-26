@@ -76,4 +76,5 @@ class SSD1351(displayio.Display):
     """SSD1351 driver"""
     def __init__(self, bus, **kwargs):
         super().__init__(bus, _INIT_SEQUENCE, **kwargs, set_column_command=0x15,
-                         set_row_command=0x75, write_ram_command=0x5C)
+                         set_row_command=0x75, write_ram_command=0x5C,
+                         single_byte_bounds=True)
