@@ -68,7 +68,7 @@ _INIT_SEQUENCE = (
     b"\xB4\x03\xA0\xB5\x55"  # SET_VSL Set segment low volt
     b"\xB6\x01\x01"  # PRECHARGE2
     b"\xA0\x01\x26"  # Set Color Mode
-    b"\xAF\x00\x00"  # DISPLAY_ON
+    b"\xAF\x00"  # DISPLAY_ON
 )
 
 # pylint: disable=too-few-public-methods
