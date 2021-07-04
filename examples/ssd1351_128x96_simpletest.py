@@ -26,7 +26,7 @@ display_bus = displayio.FourWire(
 display = SSD1351(display_bus, width=128, height=96)
 
 # Make the display context
-splash = displayio.Group(max_size=10)
+splash = displayio.Group()
 display.show(splash)
 
 color_bitmap = displayio.Bitmap(128, 96, 1)
