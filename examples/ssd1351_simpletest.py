@@ -7,9 +7,11 @@ background, a smaller purple rectangle, and some yellow text.
 """
 
 import board
-import terminalio
 import displayio
+import fourwire
+import terminalio
 from adafruit_display_text import label
+
 from adafruit_ssd1351 import SSD1351
 
 # Release any resources currently in use for the displays
@@ -19,7 +21,7 @@ spi = board.SPI()
 tft_cs = board.D5
 tft_dc = board.D6
 
-display_bus = displayio.FourWire(
+display_bus = fourwire.FourWire(
     spi, command=tft_dc, chip_select=tft_cs, reset=board.D9, baudrate=16000000
 )
 
