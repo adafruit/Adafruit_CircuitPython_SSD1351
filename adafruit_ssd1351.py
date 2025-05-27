@@ -32,6 +32,7 @@ import busdisplay
 
 try:
     import typing
+
     import fourwire
 except ImportError:
     pass
