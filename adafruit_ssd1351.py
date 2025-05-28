@@ -28,7 +28,14 @@ Implementation Notes
 
 """
 
-import displayio
+import busdisplay
+
+try:
+    import typing
+
+    import fourwire
+except ImportError:
+    pass
 
 __version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_SSD1351.git"
@@ -55,10 +62,10 @@ _INIT_SEQUENCE = (
 )
 
 
-class SSD1351(displayio.Display):
+class SSD1351(busdisplay.BusDisplay):
     """SSD1351 driver"""
 
-    def __init__(self, bus: displayio.FourWire, **kwargs) -> None:
+    def __init__(self, bus: fourwire.FourWire, **kwargs) -> None:
         super().__init__(
             bus,
             _INIT_SEQUENCE,
