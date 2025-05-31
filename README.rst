@@ -37,6 +37,7 @@ Usage Example
 
     import board
     import displayio
+    import fourwire
     from adafruit_ssd1351 import SSD1351
 
     spi = board.SPI()
@@ -44,7 +45,7 @@ Usage Example
     tft_dc = board.D6
 
     displayio.release_displays()
-    display_bus = displayio.FourWire(spi, command=tft_dc, chip_select=tft_cs, reset=board.D9)
+    display_bus = fourwire.FourWire(spi, command=tft_dc, chip_select=tft_cs, reset=board.D9)
 
     display = SSD1351(display_bus, width=128, height=128)
 
